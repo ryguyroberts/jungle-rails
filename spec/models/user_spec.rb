@@ -124,5 +124,36 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe '.authenticate_with_credentials'
+  describe '.authenticate_with_credentials' do
+    # Making a valid user to be used in every test
+    before do
+      @user = User.create(
+        first_name: 'Test',
+        last_name: 'User',
+        email: 'testuser@gmail.com',
+        password: 'testpass',
+        password_confirmation: 'testpass'
+      )
+    end
+
+    it 'returns the user when both email and password are correct' do
+      authenticated_user = User.authenticate_with_credentials('testuser@gmail.com', 'testpass')
+      expect(authenticated_user).to eq(@user)
+    end
+
+    it 'returns nil when email is not found' do
+    end
+
+    it 'returns nil when email is found but pass is wrong' do
+
+    end
+
+    it 'returns the user even if spaces in email for a valid user' do
+
+    end
+
+    it 'returns the user even if the case of the email is different' do
+      
+    end
+  end
 end
