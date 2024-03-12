@@ -142,18 +142,23 @@ RSpec.describe User, type: :model do
     end
 
     it 'returns nil when email is not found' do
+      authenticated_user = User.authenticate_with_credentials('nouser@gmail.com', 'testpass')
+      expect(authenticated_user).to be_nil
     end
 
     it 'returns nil when email is found but pass is wrong' do
-
+      authenticated_user = User.authenticate_with_credentials('testuser@gmail.com', 'wrongpass')
+      expect(authenticated_user).to be_nil
     end
 
     it 'returns the user even if spaces in email for a valid user' do
-
+      authenticated_user = User.authenticate_with_credentials('   testuser@gmail.com   ', 'testpass')
+      expect(authenticated_user).to eq(@user)
     end
 
     it 'returns the user even if the case of the email is different' do
-      
+      authenticated_user = User.authenticate_with_credentials('testUSEr@gMAil.com', 'testpass')
+      expect(authenticated_user).to eq(@user)
     end
   end
 end
