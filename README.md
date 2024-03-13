@@ -8,9 +8,18 @@ App was presented with some bugs and missing features, which have since been add
 
 ### User Login and Registration
 
+#### Login
+!["Login"](https://github.com/ryguyroberts/jungle-rails/blob/master/doc/login.png?raw=true)
+
+#### Register
+!["Register"](https://github.com/ryguyroberts/jungle-rails/blob/master/doc/register.png?raw=true)
+
 ### Admins can add new product categories
+!["Categories"](https://github.com/ryguyroberts/jungle-rails/blob/master/doc/new_cat.png?raw=true)
 
 ### Order Details page
+!["Orders"](https://github.com/ryguyroberts/jungle-rails/blob/master/doc/order%20details.png?raw=true)
+
 
 ## Setup
 
