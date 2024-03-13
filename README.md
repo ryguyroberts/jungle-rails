@@ -2,6 +2,16 @@
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
+App was presented with some bugs and missing features, which have since been added.
+
+## Added features
+
+### User Login and Registration
+
+### Admins can add new product categories
+
+### Order Details page
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
